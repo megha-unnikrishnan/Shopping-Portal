@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {% if category %}
+        {{category|truncatewords:155}}
+    {% else %}
+        Welcome to Ecommerce Point!Your needs are here..Shop us...
+    {% endif %}
+{% endblock %}
+{% block title %}
+    {% if category %}
+        {{category.name}}-Ecommerce Point
+    {% else %}
+        New collections on Ecommerce Point
+    {% endif %}
+{% endblock %}
+{% block content %}
+    {% if category %}
+        <div>
+            <div class="row row_class">
+                <div class="mx-auto">
+                    <p style="font-size:24px"><a class="prodcat" href="{% url 'shop:allProdCat' %}" >Our Product Collections</a>|{{category.name}}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="mx-auto">
+        {% if category %}
+            <img class="cat_image" src="{{category.image.url}}" alt="{{category.name}}" width="400" height="400">
+    </div><br>
+    <div class="container">
+        <h1 class="text-center my_title">{{category.name}}</h1>
+<!--        <p class="text-justify my_justify">{{category.description}}</p>-->
+    </div>
+        {% else %}
+            <div>
+                <img class="cat_image cat_image_padding" src="{% static 'images/banner.png' %}" alt="Our Products"  class="image">
+            </div><br>
+            <div class="container">
+                <h1 class="text-center my_title">Our products collections</h1>
+                <p class="text-justify my_justify">Product Designers are responsible for coming up with new product designs that meet the needs and wants of consumers. They will have many duties, such as creating design concepts, drawing ideas to determine which one is best suited for the product, and communicating their plans effectively so engineers can execute them.This can pose a usability issue if your store has large descriptions which consume the viewport, especially on mobile devices. This may lead to increases in bounce rates and drops in conversions rates as users may not scroll to reach the collections product list / grid.</p>
+            </div>
+        {% endif %}
+<div class="container">
+    <div class="row mx_auto">
+        {% for product in products.object_list %}
+        <div class="my_bottom_margin col-9 col-sm-12  col-md-4 xl-lg-4">
+            <div class="card text-center" style="min-width:18rem">
+                <a href="{{product.get_url}}"><img class="card-img-top" src="{{product.image.url}}" alt="{{product.name}}" width="300" height="300" > </a>
+            </div><br>
+            <div class="card-body">
+                <h4>{{product.name}}</h4>
+                <p><i class="fas fa-rupee-sign"></i>{{product.price}}</p><br>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="mx_auto">
+        {% if products.paginator.num_pages > 1 %}
+        <hr>
+        <div class="text-center">
+            {% for pg in products.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn btn-light btn-sm {% if products.number == pg %} active {% endif %}">{{pg}}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <br>
+</div>
+{% endblock %}

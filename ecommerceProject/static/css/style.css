@@ -1,0 +1,142 @@
+body{
+    padding-left:7px;
+}
+
+/** nav bar **/
+.bg-body-tertiary{
+    width:87.4%;
+    margin-left:84px;
+
+}
+.nav-item{
+    font-size : 14px;
+    letter-spacing:4px;
+    text-transform : uppercase;
+}
+.dropdown-item{
+    font-size : 14px;
+    text-transform : uppercase;
+}
+body{
+    font-family:  Roboto Mono;
+}
+.my_footer{
+    background-color:#f8f9fa;
+    height:50px;
+}
+
+/** category **/
+.row_class{
+    padding-top:15px;
+}
+.row_class .mx_auto{
+    color:#000;
+    font-size:12px;
+}
+.cat_image{
+    width:88%;
+    height:500px;
+    margin-left:80px
+}
+.my_title{
+    font-size:20px;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-weight:bold;
+}
+.cat_image_padding{
+    padding:5px;
+}
+.my_justify{
+    font-size:19px;
+    text-align:justify;
+}
+
+.prodcat{
+     margin-left: 80px;
+    letter-spacing: 1px;
+    font-size: 24px;
+    color: #FF8C00;
+}
+.my_bottom_margin{
+    margin-bottom:10px
+}
+
+.card-body{
+    font-size:14px;
+    text-transform:uppercase;
+    letter-padding:2em;
+}
+.anchor{
+    color: #FF8C00;
+}
+
+/**product page**/
+
+.my-prod-row-class{
+    padding-top:15px;
+    padding-bottom:20px;
+}
+
+.my-prod-row-class .mx_auto{
+    color:#000;
+    font-size:12px;
+    text-decoration:none;
+}
+
+.prod_title{
+    font-size:16px;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    padding-top:15px;
+    padding-bottom:10px;
+}
+.prod-text{
+    font-size:20px;
+    text-align : justify;
+}
+
+
+/** Search Products **/
+
+.my_search_text{
+    padding-top:20px;
+    font-size: 20px;
+}
+
+.me-2{
+    padding-left: 43px;
+
+}
+input{
+    ::-webkit-input-placeholder {
+    text-align: center;
+}
+}
+
+/** Cart Page **/
+.my_custom_table{
+    min-width:400px;
+    font-size:14px;
+}
+.my_custom_head{
+    font-weight:normal;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    background-color:#FFD580  !important;
+}
+.custom_a{
+    text-decoration : none;
+    margin-left:15px;
+}
+.custom_icon{
+    text-decoration : none;
+    color : #868e96 !important;
+}
+
+.my_custom_button{
+    margin-top:5px;
+}
+td{
+    font-size:15px;
+}
